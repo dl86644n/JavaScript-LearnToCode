@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME Car Rental</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--JavaScript-->
+    <script src="scripts/index.js"></script>
+</head>
+
+
+<body>
+    <div class="text-center bg-grey p-4">
+        <h1>ACME Car Rental</h1>
+    </div>
+    <div class="container p-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <div class="card" id="calculationcard">
+                    <div class="card-body text-center p-5">
+
+
+                        <label for="pickUpDate">Pick Up Date:</label>
+                        <input type="date" id="pickUpDate">
+                        <br>
+                        <label for="numberOfDays">Number of Days</label>
+                        <input type="text" id="numberOfDays">
+                        <br>
+
+                        <p>
+                            Options <br>
+                            <input type="checkbox" id="electronicTollTag">
+                            <label for="electronicTollTag">Electronic Toll Tag? ($3.95/Day)</label>
+                            <br>
+                            <input type="checkbox" id="gps">
+                            <label for="gps">GPS ($2.95/Day)</label>
+                            <br>
+                            <input type="checkbox" id="roadsideAssistance">
+                            <label for="roadsideAssistance">Roadside Assistance ($2.95/Day)</label>
+                            <br>
+                        </p>
+                        <p>
+                            Under 25<br>
+                            <input type="radio" name="Under25" id="yesUnder25">
+                            <label for="yesUnder">Yes</label>
+
+                            <input type="radio" name="Under25" id="noUnder25" checked>
+                            <label for="noUnder">No</label>
+                        </p>
+
+                        <input type="button" value="Estimate Your Cost" id="estimateYourCostBtn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <div class="card" id="totalcard">
+                    <div class="card-body text-center p-5">
+                        <p>Total Charges Below</p>
+                        <p id="carRental"></p>
+                        <p id="options"></p>
+                        <p id="under25Surcharge"></p>
+                        <p id="totalDue"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="text-center">
+        &copy;ACME 2021
+    </footer>
+    <!--Boostrap/JQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
